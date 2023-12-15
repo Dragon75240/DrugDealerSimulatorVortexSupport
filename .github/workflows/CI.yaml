@@ -3,7 +3,7 @@ name: Upload Artifact
 on:
   push:
     branches:
-      - master # Replace with your branch name
+      - main # Replace with your branch name
 
 jobs:
   upload-artifact:
