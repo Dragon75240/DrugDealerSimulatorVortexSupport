@@ -10,10 +10,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: List Files
+      run: |
+        ls -la
+        ls -la ./*
+
     - name: Zip Project Files
       run: |
-        # Zip all files in the project directory
-        zip project-files.zip .
+        zip -r project-files.zip .
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
