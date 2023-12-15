@@ -13,10 +13,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - run: "mkdir ./zipped"
-      - run: "mv gameart.jpg ./zipped"
-      - run: "mv index.js ./zipped"
-      - run: "mv info.json ./zipped"
+      - run: "mkdir ./DrugDealerSimulator\ Vortex\ Extension"
+      - run: "mv gameart.jpg ./DrugDealerSimulator\ Vortex\ Extension"
+      - run: "mv index.js ./DrugDealerSimulator\ Vortex\ Extension"
+      - run: "mv info.json ./DrugDealerSimulator\ Vortex\ Extension"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
