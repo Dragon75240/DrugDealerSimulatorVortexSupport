@@ -2,5 +2,5 @@
     "name": "Drug Dealer Simulator",
     "author": "Dragon75240",
     "version": "1.0.3",
-    "description": "Support for DDS"
+    "description": "Support for DDS, does not work with DLL's, all content must be in the base directory \n Ex -> ModName.zip/StringTables/DrugNames.uasset"
 }

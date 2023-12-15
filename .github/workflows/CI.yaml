@@ -3,7 +3,7 @@ name: Upload Artifact
 on:
   push:
     branches:
-      - main # Replace with your branch name
+      - main
 
 jobs:
   upload-artifact:
@@ -16,7 +16,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: my-artifact # Replace with your desired artifact name
+          name: Download-Me
           path: |
             ./
             !.github
