@@ -1,28 +1,20 @@
-name: Zip and Upload Artifact
+name: Upload Artifact
 
-on: [push]
+on:
+  push:
+    branches:
+      - main # Replace with your branch name
 
 jobs:
-  build:
+  upload-artifact:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Create Temporary Directory
-      run: mkdir temp_directory
-
-    - name: Copy Project Files to Temporary Directory
-      run: cp -r * temp_directory/
-
-    - name: Zip Project Files
-      run: |
-        cd temp_directory
-        zip -r ../project-files.zip .
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: project-artifact
-        path: project-files.zip
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact # Replace with your desired artifact name
+          path: ./
