@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: "mkdir ./DrugDealerSimulatorVortexExtension"
       - run: "mv gameart.jpg ./DrugDealerSimulatorVortexExtension/"
@@ -19,7 +19,7 @@ jobs:
       - run: "mv info.json ./DrugDealerSimulatorVortexExtension/"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Download-Me
           path: |
