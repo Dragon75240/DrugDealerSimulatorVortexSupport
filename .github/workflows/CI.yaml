@@ -13,12 +13,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - run: "mkdir ./zipped"
+      - run: "mv gameart.jpg ./zipped"
+      - run: "mv index.js ./zipped"
+      - run: "mv info.json ./zipped"
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: Download-Me
           path: |
-            ./
+            ./zipped
             !.github
             !.gitignore
             !.git
