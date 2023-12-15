@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: sudo apt-get install zip
-    - run: pwd
-    - run: zip Zip.zip *
+    - run: ls
+    - run: zip /home/runner/work/DrugDealerSimulatorVortexSupport/DrugDealerSimulatorVortexSupport/Zip.zip *
     - uses: actions/upload-artifact@v4
       with:
         name: DownloadMe!
-        path: /Zip.zip
+        path: /home/runner/work/DrugDealerSimulatorVortexSupport/DrugDealerSimulatorVortexSupport/Zip.zip
