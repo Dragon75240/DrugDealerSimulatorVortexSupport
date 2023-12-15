@@ -1,13 +1,22 @@
-name: "RunZip"
+name: Zip and Upload Artifact
+
 on: [push]
+
 jobs:
-  RunZip:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - run: sudo apt-get install zip
-    - run: ls
-    - run: zip /home/runner/work/DrugDealerSimulatorVortexSupport/DrugDealerSimulatorVortexSupport/Zip.zip *
-    - uses: actions/upload-artifact@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Zip Project Files
+      run: |
+        # Zip all files in the project directory
+        zip project-files.zip .
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
       with:
-        name: DownloadMe!
-        path: /home/runner/work/DrugDealerSimulatorVortexSupport/DrugDealerSimulatorVortexSupport/Zip.zip
+        name: project-artifact
+        path: project-files.zip
