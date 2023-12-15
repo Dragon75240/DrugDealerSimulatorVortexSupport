@@ -10,14 +10,16 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: List Files
-      run: |
-        ls -la
-        ls -la ./*
+    - name: Create Temporary Directory
+      run: mkdir temp_directory
+
+    - name: Copy Project Files to Temporary Directory
+      run: cp -r * temp_directory/
 
     - name: Zip Project Files
       run: |
-        zip -r project-files.zip .
+        cd temp_directory
+        zip -r ../project-files.zip .
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
