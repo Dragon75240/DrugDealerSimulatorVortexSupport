@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - run: "mkdir ./DrugDealerSimulator\ Vortex\ Extension"
-      - run: "mv gameart.jpg ./DrugDealerSimulator\ Vortex\ Extension"
-      - run: "mv index.js ./DrugDealerSimulator\ Vortex\ Extension"
-      - run: "mv info.json ./DrugDealerSimulator\ Vortex\ Extension"
+      - run: "mv gameart.jpg ./DrugDealerSimulator\ Vortex\ Extension/"
+      - run: "mv index.js ./DrugDealerSimulator\ Vortex\ Extension/"
+      - run: "mv info.json ./DrugDealerSimulator\ Vortex\ Extension/"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
