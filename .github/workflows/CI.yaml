@@ -19,5 +19,6 @@ jobs:
           name: my-artifact # Replace with your desired artifact name
           path: |
             ./
-            !.github/ # Exclude the .github directory
+            !.github
             !.gitignore
+            !.git
