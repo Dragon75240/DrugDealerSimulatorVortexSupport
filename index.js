@@ -53,7 +53,7 @@ function setup(discovery, api) {
             'question',
             'Mods may not load correctly',
             {
-              text: "Most mods for this game require the Unreal Mod Loader / Unreal Mod Unlocker. Please follow instructions on the discord under #getting-started.",
+              text: "Most mods for this game require the Unreal Mod Loader / Unreal Mod Unlocker tool. Please follow instructions on the discord under #getting-started.",
             },
             [
               { 
